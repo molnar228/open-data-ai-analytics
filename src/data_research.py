@@ -16,3 +16,7 @@ if os.path.exists(file_path):
     total_invalidity = df['invalidity'].fillna(0).sum()
     percent_inv = (total_invalidity / total_awards) * 100 if total_awards > 0 else 0
     print(f"Відсоток звань для осіб з інвалідністю: {percent_inv:.2f}%")
+
+    print("\n--- 3. Топ-3 місяці за кількістю нагород ---")
+    monthly_stats = df.groupby('period2')['number'].sum().sort_values(ascending=False)
+    print(monthly_stats.head(3))
