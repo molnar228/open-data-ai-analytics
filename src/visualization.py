@@ -5,7 +5,7 @@ import os
 
 sns.set_theme(style="whitegrid")
 
-file_path = os.path.join("..", "data", "raw", "master-treiner-2023.csv")
+file_path = os.path.join("..", "data", "raw", "dataset.csv")
 output_dir = os.path.join("reports", "figures")
 os.makedirs(output_dir, exist_ok=True)
 

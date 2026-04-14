@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-file_path = os.path.join("..", "data", "raw", "master-treiner-2023.csv")
+file_path = os.path.join("..", "data", "raw", "dataset.csv")
 
 if os.path.exists(file_path):
     df = pd.read_csv(file_path, sep=';', na_values="null")
