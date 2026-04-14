@@ -31,5 +31,19 @@ services:
     volumes:
       - ./data:/app/data
 
+  data_quality:
+    build:
+      context: ./data_quality_analysis
+    container_name: lab_data_quality
+    depends_on:
+      data_load:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    volumes:
+      - ./reports:/app/reports
+
 volumes:
   pgdata:
+
+
