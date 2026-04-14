@@ -67,6 +67,18 @@ services:
     volumes:
       - ./plots:/app/plots
 
+  web:
+    build:
+      context: ./web
+    container_name: lab_web
+    depends_on:
+      visualization:
+        condition: service_completed_successfully
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./reports:/app/reports
+      - ./plots:/app/plots
 volumes:
   pgdata:
 
