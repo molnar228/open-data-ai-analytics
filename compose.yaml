@@ -54,6 +54,19 @@ services:
         DATABASE_URL: ${DATABASE_URL}
       volumes:
         - ./reports:/app/reports
+
+  visualization:
+    build:
+      context: ./visualization
+    container_name: lab_visualization
+    depends_on:
+      data_research:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    volumes:
+      - ./plots:/app/plots
+
 volumes:
   pgdata:
 
