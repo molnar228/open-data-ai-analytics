@@ -43,6 +43,17 @@ services:
     volumes:
       - ./reports:/app/reports
 
+  data_research:
+      build:
+        context: ./data_research
+      container_name: lab_data_research
+      depends_on:
+        data_quality:
+          condition: service_completed_successfully
+      environment:
+        DATABASE_URL: ${DATABASE_URL}
+      volumes:
+        - ./reports:/app/reports
 volumes:
   pgdata:
 
