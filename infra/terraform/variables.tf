@@ -1,6 +1,6 @@
 variable "location" {
   description = "Регіон Azure для розгортання"
-  default     = "swedencentral"
+  default     = "northeurope"
 }
 
 variable "prefix" {
