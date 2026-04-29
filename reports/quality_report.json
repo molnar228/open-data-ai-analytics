@@ -1,0 +1,23 @@
+{
+    "total_rows": 128,
+    "total_columns": 7,
+    "duplicates": 79,
+    "missing_values": {
+        "title": 80,
+        "period1": 80,
+        "period2": 80,
+        "number": 84,
+        "sex1": 84,
+        "sex2": 88,
+        "invalidity": 91
+    },
+    "data_types": {
+        "title": "object",
+        "period1": "float64",
+        "period2": "object",
+        "number": "float64",
+        "sex1": "float64",
+        "sex2": "float64",
+        "invalidity": "float64"
+    }
+}
