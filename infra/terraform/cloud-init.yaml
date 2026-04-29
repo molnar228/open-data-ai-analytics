@@ -14,3 +14,6 @@ runcmd:
 
   - cd /home/azureuser/app
   - docker compose up -d
+
+  - cd monitoring
+  - docker compose -f docker-compose.monitoring.yml up -d
